@@ -13,7 +13,7 @@ var {
   Animated,
   StyleSheet,
   Dimensions,
-  TouchableHighlight,
+  TouchableOpacity,
 } = require('react-native');
 
 var WINDOW_HEIGHT = Dimensions.get('window').height;
@@ -78,6 +78,7 @@ var ParallaxImage = createReactClass({
       imageStyle,
       overlayStyle,
       children,
+      activeOpacity,
       ...props
     } = this.props;
     var parallaxPadding = height * parallaxFactor;
@@ -121,9 +122,9 @@ var ParallaxImage = createReactClass({
     // around the element
     if(onPress) {
       return (
-        <TouchableHighlight ref={component => this._touchable = component} onPress={onPress}>
+        <TouchableOpacity ref={component => this._touchable = component} onPress={onPress} activeOpacity={activeOpacity}>
           {content}
-        </TouchableHighlight>
+        </TouchableOpacity>
       );
     }
     return content;
