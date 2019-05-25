@@ -25,6 +25,7 @@ var ParallaxImage = createReactClass({
     parallaxFactor: PropTypes.number,
     imageStyle:     Image.propTypes.style,
     overlayStyle:   View.propTypes.style,
+    activeOpacity:  PropTypes.number,
   },
 
   getDefaultProps: function() {
