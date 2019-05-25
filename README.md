@@ -23,6 +23,7 @@ var ParallaxView = React.createClass({
           style={{ height: 200 }}
           overlayStyle={{ backgroundColor: 'rgba(0,0,0,0.3)'}}
           source={{ uri: 'http://loremflickr.com/640/480' }}
+          activeOpacity={0.8}
         >
           <Text>This is optional overlay content</Text>
         </Parallax.Image>
@@ -50,6 +51,7 @@ Any [`Image` property](http://facebook.github.io/react-native/docs/image.html) a
 |**`imageStyle`**|Optional image style, `width` and `height` styles are set automatically.|*None*|
 |**`overlayStyle`**|Optional overlay style, might be useful if you want a shaded background for better readability. |*None*|
 |**`parallaxFactor`**|The speed of the parallax effect. Larger values require taller images or they will be zoomed in. |`0.2`|
+|**`activeOpacity`**|Set the TouchableOpacity activeOpacity value. |`0.7`|
 
 ## Demo
 
