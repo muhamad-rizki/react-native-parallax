@@ -30,6 +30,7 @@ var ParallaxImage = createReactClass({
   getDefaultProps: function() {
     return {
       parallaxFactor: 0.2,
+      activeOpacity: 0.7,
     };
   },
 
